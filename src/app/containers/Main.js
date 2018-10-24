@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
-import { SearchInput } from '../components';
+import { SearchInput, YoutubeVideoResult } from '../components';
 
 class Main extends Component {
     render() {
@@ -9,6 +9,11 @@ class Main extends Component {
             <Container>
                 <Row>
                     <SearchInput />
+                </Row>
+                <Row>
+                    <Col xs = '4'>
+                        <YoutubeVideoResult />
+                    </Col>
                 </Row>
             </Container>
         );
