@@ -7,7 +7,7 @@ class Main extends Component {
     render() {
         return (
             <Container>
-                <Row>
+                <Row className = 'py-5'>
                     <SearchInput />
                 </Row>
                 <Row>
