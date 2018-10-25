@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row } from 'reactstrap';
 
-import { SearchInput } from '../components';
+import { SearchInput, ToggleOrderButtonGroup } from '../components';
 
 import SearchResults from './SearchResults';
 
@@ -11,6 +11,9 @@ class Main extends Component {
             <Container>
                 <Row className = 'py-5'>
                     <SearchInput />
+                </Row>
+                <Row>
+                    <ToggleOrderButtonGroup />
                 </Row>
                 <SearchResults />
             </Container>
