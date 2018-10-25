@@ -31,11 +31,11 @@ class ToggleOrderButtonGroup extends Component {
     }
 
     _setSortByTitle() {
-        this.props.dispatch(setSortBy('title'));
+        this.props._sortBy !== 'title' && this.props.dispatch(setSortBy('title'));
     }
 
     _setSortByDate() {
-        this.props.dispatch(setSortBy('publishedDate'));
+        this.props._sortBy !== 'publishedDate' && this.props.dispatch(setSortBy('publishedDate'));
     }
 }
 

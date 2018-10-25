@@ -35,15 +35,11 @@ class ToggleOrderButtonGroup extends Component {
     }
 
     _setAscending() {
-        if(this.props._order !== 'asc') {
-            this.props.dispatch(setOrder('asc'))
-        }
+        this.props._order !== 'asc' && this.props.dispatch(setOrder('asc'))
     }
 
     _setDescending() {
-        if(this.props._order !== 'desc') {
-            this.props.dispatch(setOrder('desc'))
-        }
+        this.props._order !== 'desc' && this.props.dispatch(setOrder('desc'))
     }
 }
 

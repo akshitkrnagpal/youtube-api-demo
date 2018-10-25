@@ -3,12 +3,22 @@ import { connect } from 'react-redux';
 import { Row } from 'reactstrap';
 import moment from 'moment';
 
-import { YoutubeVideoResult } from '../components';
+import {
+    YoutubeVideoResult,
+    ToggleOrderButtonGroup,
+    SortByButtonGroup
+} from '../components';
 
 class SearchResults extends Component {
     render() {
         return (
             <Row>
+                <div className = 'clearfix w-100 py-4'>
+                    <div className = 'float-right'>
+                        <ToggleOrderButtonGroup />
+                        <SortByButtonGroup />
+                    </div>
+                </div>
                 <div className='card-deck'>
                     { this._renderItems() }
                 </div>
@@ -26,11 +36,11 @@ class SearchResults extends Component {
                     items.sort((A, B) => B.snippet.title.localeCompare(A.snippet.title) );
                 }
                 break;
-            case 'publishedAt':
+            case 'publishedDate':
                 if ( this.props._order === 'asc' ) {
                     items.sort((A, B) => moment.utc(A.snippet.publishedAt).diff(moment.utc(B.snippet.publishedAt)));
                 } else {
-                    items.sort((A, B) => moment.utc(A.snippet.publishedAt).diff(moment.utc(B.snippet.publishedAt)));
+                    items.sort((A, B) => moment.utc(B.snippet.publishedAt).diff(moment.utc(A.snippet.publishedAt)));
                 }
                 break;
         }
