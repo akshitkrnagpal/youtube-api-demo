@@ -7,12 +7,18 @@ import { YoutubeVideoResult } from '../components';
 class SearchResults extends Component {
     render() {
         return (
-            <Row>
-                <Col xs = '4'>
-                    <YoutubeVideoResult />
-                </Col>
-            </Row>
+            <Row> { this._renderItems() } </Row>
         );
+    }
+
+    _renderItems() {
+        const items = this.props._items.filter(item => item.id.kind === 'youtube#video');
+        return items.map(item => (
+            <YoutubeVideoResult
+                key = { item.id.videoId }
+                snippet = { item.snippet }
+            />
+        ));
     }
 }
 
