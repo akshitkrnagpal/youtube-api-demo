@@ -27,7 +27,7 @@ class SearchInput extends Component {
 
         return (
             <Form onSubmit = { this._onSubmit } className = 'w-100'>
-                <InputGroup>
+                <InputGroup size = 'lg'>
                     <Input
                         value = { query }
                         onChange = { this._onChange }
