@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardBody, CardTitle, CardText, CardFooter } from 'reactstrap';
+import { Badge, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardFooter } from 'reactstrap';
 import moment from 'moment';
 
 import { YoutubeVideoSnippet } from '../data';
@@ -8,6 +8,7 @@ class YoutubeVideoResult extends Component {
     render() {
         const {
             title,
+            channelTitle,
             description,
             thumbnails,
             publishedAt
@@ -18,9 +19,9 @@ class YoutubeVideoResult extends Component {
         return (
             <Card className = 'mb-4'>
                 <CardImg top src = { thumbnails.high.url } />
-                <CardBody>
+                <CardBody className = 'pb-0'>
                     <CardTitle> { title } </CardTitle>
-                    <CardText> { description } </CardText>
+                    <CardText className = 'py-2'> { description } </CardText>
                 </CardBody>
                 <CardFooter>
                     <small className = 'text-muted'> Uploaded { date } </small>
