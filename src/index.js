@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Root from './Root';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 
