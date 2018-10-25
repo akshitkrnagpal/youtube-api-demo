@@ -8,14 +8,14 @@ import {
     InputGroupAddon
 } from 'reactstrap';
 
-import { setQuery } from '../redux';
+import { searchYoutube } from '../redux';
 
 class SearchInput extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            query: this.props._query
+            query: ''
         };
 
         this._onChange = this._onChange.bind(this);
@@ -52,14 +52,8 @@ class SearchInput extends Component {
 
     _onSubmit(event) {
         event.preventDefault()
-        this.props.dispatch(setQuery(this.state.query));
+        this.props.dispatch(searchYoutube(this.state.query));
     }
 }
 
-function _mapStateToProps(state) {
-    return {
-        _query: state.query.query
-    };
-}
-
-export default connect(_mapStateToProps)(SearchInput);
+export default connect()(SearchInput);

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 
-import { SearchInput, YoutubeVideoResult } from '../components';
+import { SearchInput } from '../components';
+
+import SearchResults from './SearchResults';
 
 class Main extends Component {
     render() {
@@ -10,11 +12,7 @@ class Main extends Component {
                 <Row className = 'py-5'>
                     <SearchInput />
                 </Row>
-                <Row>
-                    <Col xs = '4'>
-                        <YoutubeVideoResult />
-                    </Col>
-                </Row>
+                <SearchResults />
             </Container>
         );
     }
