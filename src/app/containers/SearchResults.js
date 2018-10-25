@@ -9,8 +9,19 @@ import {
     SortByButtonGroup
 } from '../components';
 
+import Info from './Info';
+
 class SearchResults extends Component {
     render() {
+        if (this.props._loading) {
+            return <Info text = 'Loading'/>
+        }
+        if (this.props._error) {
+            return <Info text = { this.props._error.errors[0].message } />
+        }
+        if (this.props._items.length <= 0) {
+            return <Info text = 'Search for videos' />
+        }
         return (
             <Row>
                 <div className = 'clearfix w-100 py-4'>
