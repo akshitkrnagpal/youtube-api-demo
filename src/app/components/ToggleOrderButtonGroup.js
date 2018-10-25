@@ -13,13 +13,18 @@ class ToggleOrderButtonGroup extends Component {
     }
 
     render() {
-        if (!this.props._sortBy) {
+        if (this.props._sortBy === undefined) {
             return null;
         }
         return (
-            <ButtonGroup size = 'sm'>
-                <Button onClick = { this._setAscending }> Asc </Button>
-                <Button onClick = { this._setDescending }> Desc </Button>
+            <ButtonGroup size = 'sm' className = 'mx-3'>
+                <Button disabled color = 'dark'>Order</Button>
+                <Button
+                    color = { (this.props._order === 'asc') ? 'danger' : 'light' }
+                    onClick = { this._setAscending }> Asc </Button>
+                <Button
+                    color = { (this.props._order === 'desc') ? 'danger' : 'light' }
+                    onClick = { this._setDescending }> Desc </Button>
             </ButtonGroup>
         );
     }
@@ -39,7 +44,8 @@ class ToggleOrderButtonGroup extends Component {
 
 function _mapStateToProps(state) {
     return {
-        _order: state.sort.order
+        _order: state.sort.order,
+        _sortBy: state.sort.sortBy
     };
 }
 

@@ -2,6 +2,10 @@ body {
     background-color: #eeeeee;
 }
 
+.btn.disabled {
+    opacity: 1;
+}
+
 .card {
     font-size: 0.8rem;
 }

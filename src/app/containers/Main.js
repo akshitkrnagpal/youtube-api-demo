@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row } from 'reactstrap';
 
-import { SearchInput, ToggleOrderButtonGroup } from '../components';
+import { SearchInput, ToggleOrderButtonGroup, SortByButtonGroup } from '../components';
 
 import SearchResults from './SearchResults';
 
@@ -13,6 +13,7 @@ class Main extends Component {
                     <SearchInput />
                 </Row>
                 <Row>
+                    <SortByButtonGroup />
                     <ToggleOrderButtonGroup />
                 </Row>
                 <SearchResults />
