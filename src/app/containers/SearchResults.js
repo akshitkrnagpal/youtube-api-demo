@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 
 import { YoutubeVideoResult } from '../components';
 
 class SearchResults extends Component {
     render() {
         return (
-            <Row> { this._renderItems() } </Row>
+            <Row>
+                <div className='card-deck'>
+                    { this._renderItems() }
+                </div>
+            </Row>
         );
     }
 

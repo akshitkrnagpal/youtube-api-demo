@@ -13,8 +13,8 @@ class YoutubeVideoResult extends Component {
         } = this.props.snippet;
 
         return (
-            <Card>
-                <CardImg top src = { thumbnails.default.url } />
+            <Card className = 'mb-4'>
+                <CardImg top src = { thumbnails.high.url } />
                 <CardBody>
                     <CardTitle> { title } </CardTitle>
                     <CardText> { description } </CardText>
