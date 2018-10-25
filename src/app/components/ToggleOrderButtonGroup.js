@@ -16,14 +16,19 @@ class ToggleOrderButtonGroup extends Component {
         if (this.props._sortBy === undefined) {
             return null;
         }
+        const AClassName = (this.props._order === 'asc') ? 'active' : '';
+        const DClassName = (this.props._order === 'desc') ? 'active' : '';
+
         return (
             <ButtonGroup size = 'sm' className = 'mx-3'>
-                <Button disabled color = 'dark'>Order</Button>
+                <Button disabled color = 'secondary'>Order</Button>
                 <Button
-                    color = { (this.props._order === 'asc') ? 'danger' : 'light' }
+                    color = 'light'
+                    className = { AClassName }
                     onClick = { this._setAscending }> Asc </Button>
                 <Button
-                    color = { (this.props._order === 'desc') ? 'danger' : 'light' }
+                    color = 'light'
+                    className = { DClassName }
                     onClick = { this._setDescending }> Desc </Button>
             </ButtonGroup>
         );

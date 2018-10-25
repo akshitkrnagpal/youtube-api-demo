@@ -30,7 +30,7 @@ class SearchResults extends Component {
                 if ( this.props._order === 'asc' ) {
                     items.sort((A, B) => moment.utc(A.snippet.publishedAt).diff(moment.utc(B.snippet.publishedAt)));
                 } else {
-                    items.sort((A, B) => moment.utc(B.snippet.publishedAt).diff(moment.utc(A.snippet.publishedAt)));
+                    items.sort((A, B) => moment.utc(A.snippet.publishedAt).diff(moment.utc(B.snippet.publishedAt)));
                 }
                 break;
         }

@@ -13,8 +13,12 @@ class Main extends Component {
                     <SearchInput />
                 </Row>
                 <Row>
-                    <SortByButtonGroup />
-                    <ToggleOrderButtonGroup />
+                    <div className = 'clearfix w-100 py-4'>
+                        <div className = 'float-right'>
+                            <ToggleOrderButtonGroup />
+                            <SortByButtonGroup />
+                        </div>
+                    </div>
                 </Row>
                 <SearchResults />
             </Container>

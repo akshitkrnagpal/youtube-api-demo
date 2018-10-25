@@ -15,13 +15,15 @@ class ToggleOrderButtonGroup extends Component {
     render() {
         return (
             <ButtonGroup size = 'sm' className = 'mx-3'>
-                <Button disabled color = 'dark'>Sort By</Button> 
+                <Button disabled color = 'secondary'>Sort By</Button>
                 <Button
-                    color = { (this.props._sortBy === 'title') ? 'danger' : 'light' }
+                    color = 'light'
+                    className = { (this.props._sortBy === 'title') ? 'active' : '' }
                     onClick = { this._setSortByTitle }
                 > Title </Button>
                 <Button
-                    color = { (this.props._sortBy === 'publishedDate') ? 'danger' : 'light' }
+                    color = 'light'
+                    className = { (this.props._sortBy === 'publishedDate') ? 'active' : '' }
                     onClick = { this._setSortByDate }
                 > Published Date </Button>
             </ButtonGroup>
