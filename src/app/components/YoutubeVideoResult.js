@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardBody, CardTitle, CardText, CardFooter } from 'reactstrap';
 import moment from 'moment';
 
-import { YoutubeVideoSnippet } from '../data';
-
 class YoutubeVideoResult extends Component {
     render() {
         const {
@@ -29,9 +27,5 @@ class YoutubeVideoResult extends Component {
         );
     }
 }
-
-YoutubeVideoResult.defaultProps = {
-    snippet: YoutubeVideoSnippet
-};
 
 export default YoutubeVideoResult;
