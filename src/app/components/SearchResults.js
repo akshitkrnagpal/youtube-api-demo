@@ -7,6 +7,7 @@ import { Row } from 'reactstrap';
 import moment from 'moment';
 
 import {
+    LoadMoreResults,
     PlaceholderInfo,
     SortByButtonGroup,
     ToggleOrderButtonGroup,
@@ -26,7 +27,7 @@ class SearchResults extends Component<Props> {
     render() {
 
         // Return Loading.
-        if (this.props._loading) {
+        if (this.props._loading && this.props._items.length <= 0) {
             return <PlaceholderInfo icon = 'spinner'/>
         }
 
@@ -53,6 +54,9 @@ class SearchResults extends Component<Props> {
                 </div>
                 <div className='card-deck'>
                     { this._renderItems() }
+                </div>
+                <div className = 'text-center w-100 py-4'>
+                    <LoadMoreResults />
                 </div>
             </Row>
         );

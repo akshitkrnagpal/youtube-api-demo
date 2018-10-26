@@ -4,11 +4,12 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { Container } from 'reactstrap';
 
-import { SearchInput } from './components';
-
 import { store } from './redux';
 
-import { SearchResults } from './components';
+import {
+    SearchInput,
+    SearchResults
+ } from './components';
 
 import './fontawesome';
 

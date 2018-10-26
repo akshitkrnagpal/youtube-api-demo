@@ -1,3 +1,4 @@
+export { default as LoadMoreResults } from './LoadMoreResults';
 export { default as PlaceholderInfo } from './PlaceholderInfo';
 export { default as SearchInput } from './SearchInput';
 export { default as SearchResults } from './SearchResults';
