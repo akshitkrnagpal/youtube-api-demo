@@ -1,5 +1,6 @@
 // @flow
 
+import { YOUTUBE_API_KEY } from '../../config';
 import { SEARCH_YOUTUBE } from '../actionTypes';
 
 export function searchYoutube(query: string) {
@@ -11,7 +12,7 @@ export function searchYoutube(query: string) {
                 params: {
                     part: 'snippet',
                     q: query,
-                    key: ''
+                    key: YOUTUBE_API_KEY
                 }
             }
         }
