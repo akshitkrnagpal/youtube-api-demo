@@ -71,6 +71,7 @@ class SearchResults extends Component<Props> {
         return items.map(item => (
             <YoutubeVideoResult
                 key = { item.id.videoId }
+                videoId = { item.id.videoId }
                 snippet = { item.snippet }
             />
         ));
