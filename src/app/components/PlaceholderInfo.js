@@ -15,7 +15,10 @@ class PlaceholderInfo extends Component<Props> {
         const { icon, text } = this.props;
         return (
             <Row className = 'my-5'>
-                <Card body className = 'text-center p-5'>
+                <Card body
+                    className = 'text-center p-5 justify-content-center'
+                    style = {{ minHeight: '30rem' }}
+                >
                     <FontAwesomeIcon
                         className = 'mx-auto my-5'
                         icon = { icon }
