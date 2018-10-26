@@ -13,6 +13,12 @@ This project was boostrapped with [create-react-app](https://github.com/facebook
 - FontAwesome
 - Reactstrap
 
+## Packages
+- Axios
+- Moment
+- Redux Logger
+- Redux Axios Middleware
+
 ## How to Start
 
 - Download and extract zip.
