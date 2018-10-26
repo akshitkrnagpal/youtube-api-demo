@@ -33,8 +33,6 @@ export default (state: State = DEFAULT_STATE, action: Object) => {
                 items,
                 loading: true,
                 error: null,
-                query: '',
-                nextPageToken: null
             };
 
         case SEARCH_YOUTUBE_SUCCESS:

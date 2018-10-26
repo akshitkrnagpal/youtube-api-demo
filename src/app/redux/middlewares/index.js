@@ -4,9 +4,11 @@ import logger from 'redux-logger';
 
 import axios from './axios';
 
-const middlewares = applyMiddleware(
-    axios,
-    logger
-);
+var middlewares = [ axios ];
 
-export default middlewares;
+// For development
+if( process.env.NODE_ENV === 'development' ) {
+    middlewares.push(logger);
+}
+
+export default applyMiddleware(...middlewares);
