@@ -2,9 +2,13 @@
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { Container } from 'reactstrap';
 
-import { Main } from './containers';
+import { SearchInput } from './components';
+
 import { store } from './redux';
+
+import { SearchResults } from './components';
 
 type Props = {};
 
@@ -12,7 +16,10 @@ class App extends Component<Props> {
     render() {
         return (
             <Provider store = { store }>
-                <Main />
+                <Container>
+                    <SearchInput />
+                    <SearchResults />
+                </Container>
             </Provider>
         );
     }

@@ -7,9 +7,9 @@ import { Row } from 'reactstrap';
 import moment from 'moment';
 
 import {
-    YoutubeVideoResult,
+    SortByButtonGroup,
     ToggleOrderButtonGroup,
-    SortByButtonGroup
+    YoutubeVideoResult
 } from '../components';
 
 import Info from './Info';

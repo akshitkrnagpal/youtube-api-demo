@@ -8,7 +8,8 @@ import {
     Form,
     Input,
     InputGroup,
-    InputGroupAddon
+    InputGroupAddon,
+    Row
 } from 'reactstrap';
 
 import { searchYoutube } from '../redux';
@@ -37,21 +38,23 @@ class SearchInput extends Component<Props, State> {
         const { query } = this.state;
 
         return (
-            <Form onSubmit = { this._onSubmit } className = 'w-100'>
-                <InputGroup size = 'lg'>
-                    <Input
-                        value = { query }
-                        onChange = { this._onChange }
-                    />
-                    <InputGroupAddon addonType = 'append'>
-                        <Button
-                            color = 'danger'
-                            onClick = { this._onSubmit } >
-                            Search Youtube
-                        </Button>
-                    </InputGroupAddon>
-                </InputGroup>
-            </Form>
+            <Row className = 'py-5'>
+                <Form onSubmit = { this._onSubmit } className = 'w-100'>
+                    <InputGroup size = 'lg'>
+                        <Input
+                            value = { query }
+                            onChange = { this._onChange }
+                        />
+                        <InputGroupAddon addonType = 'append'>
+                            <Button
+                                color = 'danger'
+                                onClick = { this._onSubmit } >
+                                Search Youtube
+                            </Button>
+                        </InputGroupAddon>
+                    </InputGroup>
+                </Form>
+            </Row>
         );
     }
 
