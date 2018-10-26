@@ -15,11 +15,14 @@
     "redux-axios-middleware": "^4.0.0",
     "redux-logger": "^3.0.6"
   },
+  "homepage": "https://akshitkrnagpal.github.io/youtube-api-demo/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "flow-bin": "^0.84.0"
+    "flow-bin": "^0.84.0",
+    "gh-pages": "^2.0.1"
   }
 }
