@@ -12,6 +12,7 @@ export function searchYoutube(query: string) {
                 params: {
                     part: 'snippet',
                     q: query,
+                    maxResults: 25, 
                     key: YOUTUBE_API_KEY
                 }
             }
