@@ -1,8 +1,22 @@
+// @flow
+
 import React, { Component } from 'react';
-import { Card, CardImg, CardBody, CardTitle, CardText, CardFooter } from 'reactstrap';
+import {
+    Card,
+    CardBody,
+    CardFooter,
+    CardImg,
+    CardTitle,
+    CardText
+} from 'reactstrap';
+
 import moment from 'moment';
 
-class YoutubeVideoResult extends Component {
+type Props = {
+    snippet: Object;
+};
+
+class YoutubeVideoResult extends Component<Props> {
     render() {
         const {
             title,

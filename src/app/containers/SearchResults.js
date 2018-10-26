@@ -1,5 +1,8 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import type { Dispatch } from 'redux';
 import { Row } from 'reactstrap';
 import moment from 'moment';
 
@@ -11,7 +14,16 @@ import {
 
 import Info from './Info';
 
-class SearchResults extends Component {
+type Props = {
+    dispatch: Dispatch<*>;
+    _error: Object;
+    _items: Array<Object>;
+    _loading: boolean;
+    _sortBy: string;
+    _order: 'asc' | 'desc';
+};
+
+class SearchResults extends Component<Props> {
     render() {
         if (this.props._loading) {
             return <Info text = 'Loading'/>

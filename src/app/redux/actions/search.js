@@ -1,6 +1,8 @@
+// @flow
+
 import { SEARCH_YOUTUBE } from '../actionTypes';
 
-export function searchYoutube(query) {
+export function searchYoutube(query: string) {
     return {
         type: SEARCH_YOUTUBE,
         payload: {

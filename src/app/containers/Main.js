@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react';
 import { Container, Row } from 'reactstrap';
 
@@ -5,7 +7,9 @@ import { SearchInput } from '../components';
 
 import SearchResults from './SearchResults';
 
-class Main extends Component {
+type Props = {};
+
+class Main extends Component<Props> {
     render() {
         return (
             <Container>

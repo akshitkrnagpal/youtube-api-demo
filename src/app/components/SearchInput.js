@@ -1,5 +1,8 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import type { Dispatch } from 'redux';
 import {
     Button,
     Form,
@@ -10,7 +13,15 @@ import {
 
 import { searchYoutube } from '../redux';
 
-class SearchInput extends Component {
+type Props = {
+    dispatch: Dispatch<*>;
+};
+
+type State = {
+    query: string;
+};
+
+class SearchInput extends Component<Props, State> {
     constructor(props) {
         super(props);
 
@@ -44,11 +55,15 @@ class SearchInput extends Component {
         );
     }
 
+    _onChange: (*) => void;
+
     _onChange(event) {
         this.setState({
             query: event.target.value
         });
     }
+
+    _onSubmit: (*) => void;
 
     _onSubmit(event) {
         event.preventDefault()

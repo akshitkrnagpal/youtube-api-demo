@@ -1,11 +1,21 @@
-import { SET_SORT_BY, SET_ORDER } from '../actionTypes';
+// @flow
 
-const DEFAULT_STATE = {
+import {
+    SET_SORT_BY,
+    SET_ORDER
+} from '../actionTypes';
+
+type State = {
+    sortBy: 'string' | typeof undefined;
+    order: 'asc' | 'desc';
+};
+
+const DEFAULT_STATE: State = {
     sortBy: undefined,
     order: 'asc'
 };
 
-export default (state = DEFAULT_STATE, action) => {
+export default (state: State = DEFAULT_STATE, action: Object) => {
     switch (action.type) {
         case SET_SORT_BY:
             return {

@@ -1,11 +1,19 @@
+// @flow
+
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 
 import { Main } from './containers';
+import { store } from './redux';
 
-class App extends Component {
+type Props = {};
+
+class App extends Component<Props> {
     render() {
         return (
-            <Main />
+            <Provider store = { store }>
+                <Main />
+            </Provider>
         );
     }
 }

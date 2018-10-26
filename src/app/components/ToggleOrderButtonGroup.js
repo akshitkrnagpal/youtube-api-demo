@@ -1,10 +1,19 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import type { Dispatch } from 'redux';
 import { ButtonGroup, Button } from 'reactstrap';
 
 import { setOrder } from '../redux';
 
-class ToggleOrderButtonGroup extends Component {
+type Props = {
+    dispatch: Dispatch<*>;
+    _sortBy: string;
+    _order: 'asc' | 'desc';
+};
+
+class ToggleOrderButtonGroup extends Component<Props> {
     constructor(props) {
         super(props);
 
@@ -34,9 +43,13 @@ class ToggleOrderButtonGroup extends Component {
         );
     }
 
+    _setAscending: (*) => void;
+
     _setAscending() {
         this.props._order !== 'asc' && this.props.dispatch(setOrder('asc'))
     }
+
+    _setDescending: (*) => void;
 
     _setDescending() {
         this.props._order !== 'desc' && this.props.dispatch(setOrder('desc'))
