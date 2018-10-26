@@ -28,7 +28,9 @@ class SearchResults extends Component<Props> {
             return <PlaceholderInfo icon = 'spinner'/>
         }
         if (this.props._error) {
-            return <PlaceholderInfo icon = 'exclamation' text = { this.props._error.errors[0].message } />
+            const error = this.props._error;
+            const message = error.data || error.response.data.error.message;
+            return <PlaceholderInfo icon = 'exclamation' text = { message || 'Some Error Occured' } />
         }
         if (this.props._items.length <= 0) {
             return <PlaceholderInfo icon = 'search' text = 'Search for videos' />

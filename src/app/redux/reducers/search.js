@@ -35,10 +35,11 @@ export default (state: State = DEFAULT_STATE, action: Object) => {
             };
 
         case SEARCH_YOUTUBE_FAIL:
+        console.log(action);
             return {
                 ...state,
                 loading: false,
-                error: action.error.response.data.error,
+                error: action.error,
                 items: []
             };
 
