@@ -29,16 +29,16 @@ The demo is also hosted on https://akshitkrnagpal.github.io/youtube-api-demo/
 
 ```
 /src
-    /app - Exports Root App Component.
-        /components - Exports All React Components.
-        /redux - Exports Redux Store and Action Functions.
-            /actions - Redux Actions.
-            /middlewares - Redux Middlewares.
-            /reducers - Redux Reducers
-            actionType.js - Exports Redux ActionTypes.
-            store.js - Creates Redux store using reducers and middlewares.
-        config.js - Contains Youtube API key.
-        fontawesome.js - Create FontAwesome library.
-    index.css - Contains Custom Styles.
-    index.js - Entry Point.
+├───app - Exports Root App Component.
+│   ├───components - Exports All React Components.
+│   ├───redux - Exports Redux Store and Action Functions.
+│   │   ├───actions - Redux Actions.
+│   │   ├───middlewares - Redux Middlewares.
+│   │   ├───reducers - Redux Reducers
+│   │   ├───actionType.js - Exports Redux ActionTypes.
+│   │   ├───store.js - Creates Redux store using reducers and middlewares.
+│   ├───config.js - Contains Youtube API key.
+│   ├───fontawesome.js - Create FontAwesome library.
+├───index.css - Contains Custom Styles.
+├───index.js - Entry Point.
 ```
