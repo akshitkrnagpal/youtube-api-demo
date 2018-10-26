@@ -7,12 +7,11 @@ import { Row } from 'reactstrap';
 import moment from 'moment';
 
 import {
+    PlaceholderInfo,
     SortByButtonGroup,
     ToggleOrderButtonGroup,
     YoutubeVideoResult
 } from '../components';
-
-import Info from './Info';
 
 type Props = {
     dispatch: Dispatch<*>;
@@ -26,13 +25,13 @@ type Props = {
 class SearchResults extends Component<Props> {
     render() {
         if (this.props._loading) {
-            return <Info text = 'Loading'/>
+            return <PlaceholderInfo icon = 'spinner'/>
         }
         if (this.props._error) {
-            return <Info text = { this.props._error.errors[0].message } />
+            return <PlaceholderInfo icon = 'exclamation' text = { this.props._error.errors[0].message } />
         }
         if (this.props._items.length <= 0) {
-            return <Info text = 'Search for videos' />
+            return <PlaceholderInfo icon = 'search' text = 'Search for videos' />
         }
         return (
             <Row>

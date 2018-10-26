@@ -10,6 +10,8 @@ import { store } from './redux';
 
 import { SearchResults } from './components';
 
+import './fontawesome';
+
 type Props = {};
 
 class App extends Component<Props> {
