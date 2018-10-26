@@ -44,6 +44,7 @@ class SearchInput extends Component<Props, State> {
                         <Input
                             value = { query }
                             onChange = { this._onChange }
+                            placeholder = 'Search'
                         />
                         <InputGroupAddon addonType = 'append'>
                             <Button
