@@ -1,6 +1,5 @@
 // @flow
 
-// $FlowFixMe
 import { YOUTUBE_API_KEY } from '../../config';
 import { SEARCH_YOUTUBE } from '../actionTypes';
 

@@ -23,8 +23,7 @@ This project was boostrapped with [create-react-app](https://github.com/facebook
 
 - Download and extract zip.
 - Install dependencies `yarn install`
-- Rename `/src/app/config.sample.js` to `/src/app/config.js`.
-- Replace Youtube API Key in `config.js`
+- Replace Youtube API Key in `config.js` or Add Environment Variable `REACT_APP_YOUTUBE_API_KEY`
 - `yarn start`
 
 ## Demo
