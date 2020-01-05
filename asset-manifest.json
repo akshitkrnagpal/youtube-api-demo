@@ -1,15 +1,25 @@
 {
-  "main.css": "/youtube-api-demo/static/css/main.c6606ab6.chunk.css",
-  "main.js": "/youtube-api-demo/static/js/main.4eeadcca.chunk.js",
-  "main.js.map": "/youtube-api-demo/static/js/main.4eeadcca.chunk.js.map",
-  "static/css/1.1a305b53.chunk.css": "/youtube-api-demo/static/css/1.1a305b53.chunk.css",
-  "static/js/1.6895d27b.chunk.js": "/youtube-api-demo/static/js/1.6895d27b.chunk.js",
-  "static/js/1.6895d27b.chunk.js.map": "/youtube-api-demo/static/js/1.6895d27b.chunk.js.map",
-  "runtime~main.js": "/youtube-api-demo/static/js/runtime~main.41ba3767.js",
-  "runtime~main.js.map": "/youtube-api-demo/static/js/runtime~main.41ba3767.js.map",
-  "static/css/1.1a305b53.chunk.css.map": "/youtube-api-demo/static/css/1.1a305b53.chunk.css.map",
-  "static/css/main.c6606ab6.chunk.css.map": "/youtube-api-demo/static/css/main.c6606ab6.chunk.css.map",
-  "index.html": "/youtube-api-demo/index.html",
-  "precache-manifest.f16fdd4b5042a355fc48cea9c53cbde8.js": "/youtube-api-demo/precache-manifest.f16fdd4b5042a355fc48cea9c53cbde8.js",
-  "service-worker.js": "/youtube-api-demo/service-worker.js"
+  "files": {
+    "main.css": "/youtube-api-demo/static/css/main.f88a2eef.chunk.css",
+    "main.js": "/youtube-api-demo/static/js/main.ec27c76a.chunk.js",
+    "main.js.map": "/youtube-api-demo/static/js/main.ec27c76a.chunk.js.map",
+    "runtime-main.js": "/youtube-api-demo/static/js/runtime-main.99d6bc9c.js",
+    "runtime-main.js.map": "/youtube-api-demo/static/js/runtime-main.99d6bc9c.js.map",
+    "static/css/2.d5831cfa.chunk.css": "/youtube-api-demo/static/css/2.d5831cfa.chunk.css",
+    "static/js/2.17703ab8.chunk.js": "/youtube-api-demo/static/js/2.17703ab8.chunk.js",
+    "static/js/2.17703ab8.chunk.js.map": "/youtube-api-demo/static/js/2.17703ab8.chunk.js.map",
+    "index.html": "/youtube-api-demo/index.html",
+    "precache-manifest.df6d8c2f3a809cef8a1e103b31e70f93.js": "/youtube-api-demo/precache-manifest.df6d8c2f3a809cef8a1e103b31e70f93.js",
+    "service-worker.js": "/youtube-api-demo/service-worker.js",
+    "static/css/2.d5831cfa.chunk.css.map": "/youtube-api-demo/static/css/2.d5831cfa.chunk.css.map",
+    "static/css/main.f88a2eef.chunk.css.map": "/youtube-api-demo/static/css/main.f88a2eef.chunk.css.map",
+    "static/js/2.17703ab8.chunk.js.LICENSE": "/youtube-api-demo/static/js/2.17703ab8.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99d6bc9c.js",
+    "static/css/2.d5831cfa.chunk.css",
+    "static/js/2.17703ab8.chunk.js",
+    "static/css/main.f88a2eef.chunk.css",
+    "static/js/main.ec27c76a.chunk.js"
+  ]
 }
