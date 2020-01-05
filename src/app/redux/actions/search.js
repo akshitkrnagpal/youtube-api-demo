@@ -1,9 +1,10 @@
 // @flow
 
+// $FlowFixMe
 import { YOUTUBE_API_KEY } from '../../config';
 import { SEARCH_YOUTUBE } from '../actionTypes';
 
-export function searchYoutube(query: string, pageToken: string = null) {
+export function searchYoutube(query: string, pageToken: string | null = null) {
     return {
         type: SEARCH_YOUTUBE,
         payload: {

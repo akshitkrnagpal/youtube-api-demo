@@ -39,6 +39,7 @@ export default (state: State = DEFAULT_STATE, action: Object) => {
             return {
                 ...state,
                 loading: false,
+                // $FlowFixMe
                 items: state.items.concat(action.payload.data.items),
                 query: action.payload.config.params.q,
                 nextPageToken: action.payload.data.nextPageToken
