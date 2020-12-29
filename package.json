@@ -19,7 +19,7 @@
     "redux-axios-middleware": "^4.0.1",
     "redux-logger": "^3.0.6"
   },
-  "homepage": "https://akshitkrnagpal.github.io/youtube-api-demo/",
+  "homepage": "https://youtube.akshitkrnagpal.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
